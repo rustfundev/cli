@@ -1,7 +1,14 @@
 use clap::{Parser, Subcommand};
 
 #[derive(Debug, Subcommand)]
-pub enum Command {}
+pub enum Command {
+    /// Just a test command
+    Test {
+        /// A flag
+        #[arg(short, long)]
+        flag: bool,
+    },
+}
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]

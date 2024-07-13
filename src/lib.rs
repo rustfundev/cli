@@ -5,8 +5,10 @@ use clap::Parser;
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
 
 #[tokio::main]
-pub async fn run(_args: cli::Args) -> Result<()> {
-    Ok(())
+pub async fn run(args: cli::Args) -> Result<()> {
+    match args.command {
+        cli::Command::Test { flag } => todo!("Test command: {}", flag),
+    }
 }
 
 pub fn get_args() -> Result<cli::Args> {
