@@ -3,7 +3,7 @@ use clap::{Parser, Subcommand};
 #[derive(Debug, Subcommand)]
 pub enum Command {
     /// Just a test command
-    Test {
+    Grep {
         /// A flag
         #[arg(short, long)]
         flag: bool,
